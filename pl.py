@@ -85,6 +85,7 @@ def market_overview():
         browser = pw.chromium.launch(headless = True)
         context = browser.new_context()
         page = browser.new_page()
+        page.set_default_timeout(0)
 
         
         page.goto('https://ru.investing.com/')
